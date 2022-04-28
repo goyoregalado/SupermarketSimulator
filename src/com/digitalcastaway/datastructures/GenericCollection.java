@@ -1,3 +1,5 @@
+package com.digitalcastaway.datastructures;
+
 public class GenericCollection<T> {
     private Object data[] = null;
     private int length = 0;
