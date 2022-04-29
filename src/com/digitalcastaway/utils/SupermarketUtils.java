@@ -37,4 +37,8 @@ public class SupermarketUtils {
         int indice = (int) (Math.random() * NOMBRES_PRODUCTOS.length);
         return NOMBRES_PRODUCTOS[indice];
     }
+
+    public static double generarNumeroAleatorio(int valorMaximo) {
+        return Math.random() * valorMaximo;
+    }
 }
