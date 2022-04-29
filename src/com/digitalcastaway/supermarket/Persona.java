@@ -12,7 +12,12 @@ public class Persona {
     }
 
     public static Persona generatePersona() {
-        return new Persona(SupermarketUtils.generarNombreAleatorio());
+        Persona cliente = new Persona(SupermarketUtils.generarNombreAleatorio());
+        int numProductos = (int) SupermarketUtils.generarNumeroAleatorio(4);
+        for (int i = 0; i < numProductos; i++) {
+            cliente.anyadirProducto();
+        }
+        return cliente;
     }
 
     public String getNombre() {
@@ -20,7 +25,9 @@ public class Persona {
     }
 
     public void anyadirProducto() {
-        carrito.push(Producto.generarProducto());
+        Producto producto = Producto.generarProducto();
+        System.out.println("El cliente " + getNombre() + " compra " + producto);
+        carrito.push(producto);
     }
 }
 
