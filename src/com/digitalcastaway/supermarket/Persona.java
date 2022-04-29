@@ -5,7 +5,7 @@ import com.digitalcastaway.utils.SupermarketUtils;
 
 public class Persona {
     private String nombre;
-    private GenericStack<String> carrito = new GenericStack<String>();
+    private GenericStack<Producto> carrito = new GenericStack<Producto>();
 
     public Persona(String nombre) {
         this.nombre = nombre;
@@ -17,6 +17,10 @@ public class Persona {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public void anyadirProducto() {
+        carrito.push(Producto.generarProducto());
     }
 }
 
